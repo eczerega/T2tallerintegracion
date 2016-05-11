@@ -33,7 +33,7 @@ script:
   - bundle exec rake db:test:prepare
 #  - bundle exec rspec spec/
 before_script:
-  - psql -c 'createsdaf database T2_development;' -U postgres
-  - psql -c 'createsdaf database T2_testing;' -U postgres
-  - psql -c 'createsdaf database T2_production;' -U postgres 
+  - psql -c 'create database T2_development;' -U postgres
+  - psql -c 'create database T2_testing;' -U postgres
+  - psql -c 'create database T2_production;' -U postgres 
 bundler_args: --binstubs=./bundler_stubs
