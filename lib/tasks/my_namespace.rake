@@ -1,3 +1,5 @@
+
+task :default => ["my_namespace:my_task1"]
 namespace :my_namespace do
   desc "TODO"
   task my_task1: :environment do
@@ -9,4 +11,7 @@ namespace :my_namespace do
   	'weon tonto 2'
   end
 
+task :all => ["my_namespace:my_task1", "my_namespace:my_task2"]
+
 end
+
