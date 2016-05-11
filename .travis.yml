@@ -1,10 +1,10 @@
-language: ruby
-rvm:
-  - 2.2.0
 services:
   - postgresql
 before_script:
   - psql -c 'create database T2_test;' -U postgres
+language: ruby
+rvm:
+  - 2.2.0
 deploy:
   provider: heroku
   api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
