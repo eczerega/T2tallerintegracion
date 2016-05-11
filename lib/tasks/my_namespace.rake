@@ -1,5 +1,5 @@
 
-task :default => ["my_namespace:my_task1"]
+task :default => ["my_namespace:all"]
 namespace :my_namespace do
   desc "TODO"
   task my_task1: :environment do
@@ -8,7 +8,13 @@ namespace :my_namespace do
 
   desc "TODO"
   task my_task2: :environment do
-  	'weon tonto 2'
+  	rand = Random.new(2)
+  	puts rand.rand
+  	if rand.rand >1
+  		puts 'pase'
+  	else
+  		puts 'cague'
+  	end
   end
 
 task :all => ["my_namespace:my_task1", "my_namespace:my_task2"]
