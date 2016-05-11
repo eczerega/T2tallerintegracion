@@ -1,3 +1,14 @@
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database tarea2taller;' -U postgres
 language: ruby
 rvm:
   - 2.2.0
+deploy:
+  provider: heroku
+  api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
+  app: tarea2taller
+  run:
+  - "rake db:create"
+  - "rake db:migrate"
