@@ -1,14 +1,39 @@
+
+#=begin
+#services:
+#  - postgresql
+#before_script:
+#  - psql -c 'createsdaf database T2_development;' -U postgres
+#  - psql -c 'createsdaf database T2_testing;' -U postgres
+#  - psql -c 'createsdaf database T2_production;' -U postgres 
+#language: ruby
+#rvm:
+#  - 2.2.0
+#deploy:
+#  provider: heroku
+#  api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
+#  app: tarea2taller
+#  run:
+#  - "rake db:create"
+#  - "rake db:migrate"
+
+
+language: ruby
 services:
   - postgresql
-before_script:
-  - psql -c 'createsdaf database T2_development;' -U postgres
-language: ruby
 rvm:
   - 2.2.0
-deploy:
-  provider: heroku
-  api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
-  app: tarea2taller
-  run:
-  - "rake db:create"
-  - "rake db:migrate"
+env:
+  - DB=postgresql
+script: 
+  - bundle exec rake db:create --trace
+  - bundle exec rake db:migrate --trace
+  - RAILS_ENV=test bundle exec rake db:create --trace
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+#  - bundle exec rspec spec/
+before_script:
+  - psql -c 'createsdaf database T2_development;' -U postgres
+  - psql -c 'createsdaf database T2_testing;' -U postgres
+  - psql -c 'createsdaf database T2_production;' -U postgres 
+bundler_args: --binstubs=./bundler_stubs
