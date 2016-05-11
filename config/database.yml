@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: T2_test
+  database: T2_development
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: T2_production
+  database: T2_development
   username: T2
   password: <%= ENV['T2_DATABASE_PASSWORD'] %>
