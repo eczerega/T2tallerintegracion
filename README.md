@@ -1,3 +1,3 @@
 # T2tallerintegracion
 
-[![Build Status](https://travis-ci.org/PeterHamilton/digest-email.png)](https://travis-ci.org/PeterHamilton/digest-email)
+[![Build Status](https://api.travis-ci.org/eczerega/T2tallerintegracion.png)](https://travis-ci.org/eczerega/T2tallerintegracion)
