@@ -17,11 +17,11 @@ script:
   - bundle exec rake db:test:prepare
 #  - bundle exec rspec spec/
 bundler_args: --binstubs=./bundler_stubs
-after_success:
-  deploy:
-    provider: heroku
-    api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
-    app: tarea2taller
+#after_success:
+deploy:
+  provider: heroku
+  api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
+  app: tarea2taller
 
 #after_success:
 #  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && 
