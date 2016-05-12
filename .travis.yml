@@ -23,5 +23,11 @@ after_success:
     api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
     app: tarea2taller
 
-
+#after_success:
+#  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && 
+#      [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+#    echo "This will deploy!"
+#  else
+#    echo "This will not deploy!"
+#  fi
 
