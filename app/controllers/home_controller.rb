@@ -34,16 +34,41 @@ class HomeController < ApplicationController
 					caption = nil
 					response2_json["data"].each do |post|
 						#tags.push(post["tags"])
-						tags = post["tags"]
-						username= post["user"]["username"].to_s
-						likes= post["likes"]["count"].to_i
-						url= post["images"]["standard_resolution"]["url"].to_s
-						caption= post["caption"]["text"].to_s
-						post_json = {:tags => tags, :username => username, :likes => likes, :url => url, :caption => caption}
+						begin
+							tags = post["tags"]
+						rescue
+							tags= "no tags"
+						end
+						begin
+							username= post["user"]["username"].to_s
+						rescue
+							username="no user"
+						end
+						begin
+							likes= post["likes"]["count"].to_i
+						rescue
+							likes = 0
+						end
+						begin
+							url= post["images"]["standard_resolution"]["url"].to_s
+						rescue
+							url="no url"
+						end
+						begin
+							caption= post["caption"]["text"].to_s
+						rescue
+							caption="no caption"
+						end
+							post_json = {:tags => tags, :username => username, :likes => likes, :url => url, :caption => caption}
+						
 						all_posts.push(post_json)
 					end
 					metadata = {:total => total.to_i}
-					metadata ={:metadata => metadata, :posts => all_posts, :version => '1'}
+					if Update.first != nil
+						metadata ={:metadata => metadata, :posts => all_posts, :version => Update.first.version.to_s + ", created at: " +  Update.first.date}
+					else
+						metadata ={:metadata => metadata, :posts => all_posts, :version => '1'}
+					end
 					format.all { render :json => metadata, :status => 200 }
 					#format.all { render :text => "Error formato no soportado", :status => 400 }
 				end
