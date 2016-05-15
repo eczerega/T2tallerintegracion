@@ -43,7 +43,7 @@ class HomeController < ApplicationController
 						all_posts.push(post_json)
 					end
 					metadata = {:total => total.to_i}
-					metadata ={:metadata => metadata, :posts => all_posts, :version => "1"}
+					metadata ={:metadata => metadata, :posts => all_posts, :version => Update.first.version.to_s + ", realease date: " + Update.first.date.to_s}
 					format.all { render :json => metadata, :status => 200 }
 					#format.all { render :text => "Error formato no soportado", :status => 400 }
 				end

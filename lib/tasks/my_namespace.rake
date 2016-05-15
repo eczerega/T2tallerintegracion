@@ -9,13 +9,13 @@ namespace :my_namespace do
 
   desc "UPDATE VERSION"
   task update_version: :environment do
-    puts 'Actualizando versión'
-    puts 'Ambiente actual: '+Rails.env.to_s
-    if Rails.env.development?
-      puts 'soy develop'
-    end
-    if Rails.env.test?
-      puts 'soy testing'
+    @update = Update.first
+    if @update != nil
+      @update.version = @update.version +=1
+      @update.date = Time.now
+      @update.save
+    else
+      @update = Update.create(version: 1, date: Time.now)
     end
   end
 
