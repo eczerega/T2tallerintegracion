@@ -2005,3 +2005,627 @@ Completed 200 OK in 326ms (Views: 315.5ms | ActiveRecord: 0.4ms)
   [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   Rendered updates/show.html.erb (1.8ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (1.2ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 400 Bad Request in 2161ms (Views: 0.3ms | ActiveRecord: 70.9ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"token malo"}
+Completed 400 Bad Request in 740ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"token malo"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.5ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+Completed 400 Bad Request in 1640ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 400 Bad Request in 1784ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by UpdatesController#new as HTML
+  Rendered updates/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 128ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "updates"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/updates" for 127.0.0.1 at 2016-05-15 15:44:28 -0300
+Processing by UpdatesController#index as HTML
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT "updates".* FROM "updates"[0m
+  Rendered updates/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 383ms (Views: 349.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "MyString"], ["created_at", "2016-05-15 18:44:29.207741"], ["updated_at", "2016-05-15 18:44:29.207741"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/_form.html.erb (80.9ms)
+  Rendered updates/edit.html.erb (142.2ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:44:29.395857"], ["updated_at", "2016-05-15 18:44:29.395857"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:44:29.398301"], ["updated_at", "2016-05-15 18:44:29.398301"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/index.html.erb (1.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered updates/_form.html.erb (2.0ms)
+  Rendered updates/new.html.erb (2.9ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:44:29.445190"], ["updated_at", "2016-05-15 18:44:29.445190"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/show.html.erb (1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (38.3ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "2016-05-15 15:46:10 -0300"], ["created_at", "2016-05-15 18:46:10.081265"], ["updated_at", "2016-05-15 18:46:10.081265"]]
+  [1m[35m (42.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.8ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 2134ms (Views: 3.7ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"token malo"}
+Completed 400 Bad Request in 1780ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"token malo"}
+Completed 400 Bad Request in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.4ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1836ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.4ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1658ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by UpdatesController#new as HTML
+  Rendered updates/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "updates"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/updates" for 127.0.0.1 at 2016-05-15 15:46:17 -0300
+Processing by UpdatesController#index as HTML
+  [1m[36mUpdate Load (0.6ms)[0m  [1mSELECT "updates".* FROM "updates"[0m
+  Rendered updates/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 382ms (Views: 349.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "MyString"], ["created_at", "2016-05-15 18:46:18.403732"], ["updated_at", "2016-05-15 18:46:18.403732"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/_form.html.erb (115.7ms)
+  Rendered updates/edit.html.erb (209.8ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:46:18.670852"], ["updated_at", "2016-05-15 18:46:18.670852"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:46:18.672778"], ["updated_at", "2016-05-15 18:46:18.672778"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/index.html.erb (3.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  Rendered updates/_form.html.erb (1.6ms)
+  Rendered updates/new.html.erb (2.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:46:18.732280"], ["updated_at", "2016-05-15 18:46:18.732280"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/show.html.erb (1.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (25.8ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "2016-05-15 15:47:43 -0300"], ["created_at", "2016-05-15 18:47:43.646361"], ["updated_at", "2016-05-15 18:47:43.646361"]]
+  [1m[35m (30.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.7ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1836ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"token malo"}
+Completed 400 Bad Request in 733ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"token malo"}
+Completed 400 Bad Request in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.5ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1790ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.5ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+  [1m[36mUpdate Load (0.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1635ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by UpdatesController#new as HTML
+  Rendered updates/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "updates"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/updates" for 127.0.0.1 at 2016-05-15 15:47:50 -0300
+Processing by UpdatesController#index as HTML
+  [1m[36mUpdate Load (0.4ms)[0m  [1mSELECT "updates".* FROM "updates"[0m
+  Rendered updates/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 387ms (Views: 354.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "MyString"], ["created_at", "2016-05-15 18:47:50.468779"], ["updated_at", "2016-05-15 18:47:50.468779"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/_form.html.erb (148.4ms)
+  Rendered updates/edit.html.erb (221.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:47:50.766668"], ["updated_at", "2016-05-15 18:47:50.766668"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:47:50.769615"], ["updated_at", "2016-05-15 18:47:50.769615"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/index.html.erb (1.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered updates/_form.html.erb (2.3ms)
+  Rendered updates/new.html.erb (3.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:47:50.825398"], ["updated_at", "2016-05-15 18:47:50.825398"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/show.html.erb (1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (0.9ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+  [1m[35mUpdate Load (0.4ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+Completed 200 OK in 1802ms (Views: 9.2ms | ActiveRecord: 5.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"token malo"}
+Completed 400 Bad Request in 724ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 400 Bad Request in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"token malo"}
+Completed 400 Bad Request in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (0.4ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+  [1m[35mUpdate Load (0.2ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+Completed 200 OK in 1729ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (0.5ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+  [1m[35mUpdate Load (0.3ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+Completed 200 OK in 1781ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UpdatesController#new as HTML
+  Rendered updates/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 193ms (Views: 192.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "updates"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/updates" for 127.0.0.1 at 2016-05-15 15:48:31 -0300
+Processing by UpdatesController#index as HTML
+  [1m[35mUpdate Load (0.6ms)[0m  SELECT "updates".* FROM "updates"
+  Rendered updates/index.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 786ms (Views: 752.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (39.4ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "MyString"], ["created_at", "2016-05-15 18:48:32.214640"], ["updated_at", "2016-05-15 18:48:32.214640"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/_form.html.erb (203.6ms)
+  Rendered updates/edit.html.erb (529.1ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:48:32.879349"], ["updated_at", "2016-05-15 18:48:32.879349"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:48:32.881393"], ["updated_at", "2016-05-15 18:48:32.881393"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/index.html.erb (3.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered updates/_form.html.erb (1.8ms)
+  Rendered updates/new.html.erb (2.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:48:33.075465"], ["updated_at", "2016-05-15 18:48:33.075465"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/show.html.erb (3.1ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (37.9ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "2016-05-15 15:54:41 -0300"], ["created_at", "2016-05-15 18:54:41.395621"], ["updated_at", "2016-05-15 18:54:41.395621"]]
+  [1m[35m (52.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (26.5ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "2016-05-15 15:55:54 -0300"], ["created_at", "2016-05-15 18:55:54.700538"], ["updated_at", "2016-05-15 18:55:54.700538"]]
+  [1m[35m (30.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (23.3ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 2056ms (Views: 8.9ms | ActiveRecord: 150.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.4ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+Completed 200 OK in 1728ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"token malo"}
+Completed 400 Bad Request in 761ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"access_token"=>"token malo"}
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[36mUpdate Load (0.5ms)[0m  [1mSELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1923ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  [1m[35mUpdate Load (0.4ms)[0m  SELECT  "updates".* FROM "updates"  ORDER BY "updates"."id" ASC LIMIT 1
+Completed 200 OK in 1691ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UpdatesController#new as HTML
+  Rendered updates/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 102ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "updates"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/updates" for 127.0.0.1 at 2016-05-15 15:59:31 -0300
+Processing by UpdatesController#index as HTML
+  [1m[35mUpdate Load (0.5ms)[0m  SELECT "updates".* FROM "updates"
+  Rendered updates/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 416ms (Views: 381.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (31.5ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "MyString"], ["created_at", "2016-05-15 18:59:32.261821"], ["updated_at", "2016-05-15 18:59:32.261821"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/_form.html.erb (93.6ms)
+  Rendered updates/edit.html.erb (154.1ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:59:32.527069"], ["updated_at", "2016-05-15 18:59:32.527069"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:59:32.528971"], ["updated_at", "2016-05-15 18:59:32.528971"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered updates/index.html.erb (1.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered updates/_form.html.erb (1.9ms)
+  Rendered updates/new.html.erb (2.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "updates" ("version", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["version", 1], ["date", "Date"], ["created_at", "2016-05-15 18:59:32.574841"], ["updated_at", "2016-05-15 18:59:32.574841"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered updates/show.html.erb (1.1ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
