@@ -6,6 +6,19 @@ namespace :my_namespace do
   	puts 'Pruebas realizadas'
   end
 
+
+  desc "UPDATE VERSION"
+  task update_version: :environment do
+    puts 'Actualizando versión'
+    if Rails.env.development?
+      puts 'soy develop'
+    end
+    if Rails.env.testing?
+      puts 'soy testing'
+    end
+  end
+
+
   desc "TODO"
   task my_task2: :environment do
   	rand = Random.new(2)
