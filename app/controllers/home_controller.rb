@@ -44,20 +44,19 @@ class HomeController < ApplicationController
 					end
 					metadata = {:total => total.to_i}
 					metadata ={:metadata => metadata, :posts => all_posts, :version => "1"}
-
-
-
-
-					format.json { render :json => metadata, :status => 200 }
+					format.all { render :json => metadata, :status => 200 }
+					#format.all { render :text => "Error formato no soportado", :status => 400 }
 				end
 			rescue
 				respond_to do |format|		
-				  format.json { render  :json => { :errors => 'access token incorrecto o tag contiene espacio' }, :status => 400 }
+					format.all { render  :json => { :errors => 'access token incorrecto o tag contiene espacio' }, :status => 400 }
+					#format.all { render :text => "Error formato no soportado", :status => 400 }				
 				end						
 			end
 		else
 			respond_to do |format|		
-			  format.json { render  :json => { :errors => 'parametros incorrectos' }, :status => 400 }
+				format.all { render  :json => { :errors => 'parametros incorrectos' }, :status => 400 }
+				#format.all { render :text => "Error formato no soportado", :status => 400 }
 			end			
 		end
 	end

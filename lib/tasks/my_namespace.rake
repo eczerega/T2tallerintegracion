@@ -3,7 +3,7 @@ task :default => ["my_namespace:all"]
 namespace :my_namespace do
   desc "TODO"
   task my_task1: :environment do
-  	puts 'weon tonto 1'
+  	puts 'Pruebas realizadas'
   end
 
   desc "TODO"
@@ -11,9 +11,9 @@ namespace :my_namespace do
   	rand = Random.new(2)
   	puts rand.rand
   	if rand.rand >1
-  		puts 'pase'
+  		puts ' '
   	else
-  		puts 'cague'
+  		puts ' '
   	end
   end
 

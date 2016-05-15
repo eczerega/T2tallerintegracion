@@ -1899,3 +1899,79 @@ Started POST "/instagram/tag/buscar" for 127.0.0.1 at 2016-05-15 01:58:15 -0300
 Processing by HomeController#buscar as JSON
   Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
 Completed 200 OK in 1247ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-15 12:05:28 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 619ms (Views: 579.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/api.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/api.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-15 12:05:30 -0300
+
+
+Started POST "/instagram/tag/buscar" for ::1 at 2016-05-15 12:05:52 -0300
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"TOKEN"}
+Completed 400 Bad Request in 1093ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instagram/tag/buscar" for ::1 at 2016-05-15 12:06:35 -0300
+Processing by HomeController#buscar as JSON
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 200 OK in 2018ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instagram/tag/buscar.html" for ::1 at 2016-05-15 12:11:42 -0300
+Processing by HomeController#buscar as HTML
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+  Rendered text template (0.1ms)
+Completed 400 Bad Request in 2159ms (Views: 175.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instagram/tag/buscar.html" for ::1 at 2016-05-15 12:13:35 -0300
+Processing by HomeController#buscar as HTML
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 200 OK in 1572ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instagram/tag/buscar.js" for ::1 at 2016-05-15 12:13:46 -0300
+Processing by HomeController#buscar as JS
+  Parameters: {"tag"=>"santiago", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 200 OK in 2012ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instagram/tag/buscar.js" for ::1 at 2016-05-15 12:16:00 -0300
+Processing by HomeController#buscar as JS
+  Parameters: {"tag"=>"olasdnaxaskase", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 200 OK in 1386ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/instagram/tag/buscar.js" for ::1 at 2016-05-15 12:25:35 -0300
+Processing by HomeController#buscar as JS
+  Parameters: {"tag"=>"got", "access_token"=>"1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762"}
+Completed 200 OK in 2038ms (Views: 35.5ms | ActiveRecord: 0.0ms)
