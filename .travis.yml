@@ -25,7 +25,10 @@ deploy:
   provider: heroku
   api_key: 437a311a-23c6-4303-bb04-4b415dc40f32
   app: tarea2taller
-
+script: 
+  - heroku run rake db:migrate
+  - heroku run rake db:seed
+  - heroku run bundle exec rake my_namespace:update_version
 #after_success:
 #  if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && 
 #      [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
