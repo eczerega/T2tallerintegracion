@@ -14,6 +14,7 @@ script:
   - bundle exec rake db:migrate --trace
   - RAILS_ENV=test bundle exec rake db:create --trace
   - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - RAILS_ENV=test bundle exec rake db:seed --trace  
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec
   - bundle exec rake my_namespace:update_version

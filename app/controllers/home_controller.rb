@@ -43,13 +43,17 @@ class HomeController < ApplicationController
 						all_posts.push(post_json)
 					end
 					metadata = {:total => total.to_i}
-					metadata ={:metadata => metadata, :posts => all_posts, :version => Update.first.version.to_s + ", realease date: " + Update.first.date.to_s}
+					if Update.first != nil
+						metadata ={:metadata => metadata, :posts => all_posts, :version => Update.first.version.to_s + ", realease date: " + Update.first.date.to_s}
+					else
+						metadata ={:metadata => metadata, :posts => all_posts, :version => 'Testing'}
+					end
 					format.all { render :json => metadata, :status => 200 }
 					#format.all { render :text => "Error formato no soportado", :status => 400 }
 				end
-			rescue
+			rescue Exception => e
 				respond_to do |format|		
-					format.all { render  :json => { :errors => 'access token incorrecto o tag contiene espacio' }, :status => 400 }
+					format.all { render  :json => { :errors => e.to_s }, :status => 400 }
 					#format.all { render :text => "Error formato no soportado", :status => 400 }				
 				end						
 			end

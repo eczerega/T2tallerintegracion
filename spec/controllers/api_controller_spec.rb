@@ -5,8 +5,9 @@ RSpec.describe HomeController, type: :controller do
   describe "Request parametros correctos" do
     it 'verifica que el estado sea correcto cuando el request se envía bien' do
     params = {'tag' => 'santiago', 'access_token' => '1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762'}
-      get :buscar, params.merge(format: :json)
+      post :buscar, params.merge(format: :json)
       json = JSON.parse(response.body)
+      puts json
       expect(response).to have_http_status(200)
     end
   end
@@ -14,7 +15,7 @@ RSpec.describe HomeController, type: :controller do
   describe "Request con token incorrecto" do
     it 'verifica que el token sea correcto' do
     params = {'tag' => 'santiago', 'access_token' => 'token malo'}
-      get :buscar, params.merge(format: :json)
+      post :buscar, params.merge(format: :json)
       json = JSON.parse(response.body)
       expect(response).to have_http_status(400)
     end
@@ -23,7 +24,7 @@ RSpec.describe HomeController, type: :controller do
   describe "Request con tag presente" do
     it 'verifica que el tag esté presente' do
     params = {'access_token' => '1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762'}
-      get :buscar, params.merge(format: :json)
+      post :buscar, params.merge(format: :json)
       json = JSON.parse(response.body)
       expect(response).to have_http_status(400)
     end
@@ -32,7 +33,7 @@ RSpec.describe HomeController, type: :controller do
   describe "Request sin tag presente y token malo" do
     it 'verifica que todos los parámetros estén bien' do
     params = {'access_token' => 'token malo'}
-      get :buscar, params.merge(format: :json)
+      post :buscar, params.merge(format: :json)
       json = JSON.parse(response.body)
       expect(response).to have_http_status(400)
     end
@@ -41,7 +42,7 @@ RSpec.describe HomeController, type: :controller do
   describe "Respuesta con metadata y posts" do
     it 'verifica que la respuesta, de ser correcta, siempre contenga los objetos pedidos' do
     params = {'tag' => 'santiago', 'access_token' => '1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762'}
-      get :buscar, params.merge(format: :json)
+      post :buscar, params.merge(format: :json)
       json = JSON.parse(response.body)
       expect(response).to have_http_status(200)
       expect(json['metadata']['total']).should_not be_nil
@@ -53,7 +54,7 @@ RSpec.describe HomeController, type: :controller do
   describe "Respues con metadata y posts no vacíos" do
     it 'verifica la estructura de la respuesta dada' do
     params = {'tag' => 'santiago', 'access_token' => '1442649438.1677ed0.da39352fcbe04712ba35f360d1a98762'}
-      get :buscar, params.merge(format: :json)
+      post :buscar, params.merge(format: :json)
       json = JSON.parse(response.body)
       expect(response).to have_http_status(200)
       expect(json['metadata']['total']).should_not be_nil
